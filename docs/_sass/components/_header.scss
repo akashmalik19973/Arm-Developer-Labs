@@ -106,6 +106,7 @@
 }
 
 .navigation__item {
+  margin: 0 map-get($spacers, 3); // Equal horizontal spacing
   &::after {
     display: block;
     margin-bottom: -4px;
