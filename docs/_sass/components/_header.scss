@@ -161,7 +161,7 @@
 /* ============= */
 
 .mobile-menu-toggle {
-  display: none;
+  display: none !important;
   width: 40px;
   height: 40px;
   padding: 8px;
@@ -169,12 +169,13 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  @include flexbox();
-  @include align-items(center);
-  @include justify-content(center);
-  
-  @include media-breakpoint-down(md) {
-    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex !important;
   }
 }
 
@@ -221,7 +222,7 @@
 
 /* Hide mission button on mobile in header title, show in nav */
 .mission-button--desktop {
-  @include media-breakpoint-down(md) {
+  @media (max-width: 768px) {
     display: none !important;
   }
 }
@@ -229,7 +230,7 @@
 .navigation__item--mobile-only {
   display: none;
   
-  @include media-breakpoint-down(md) {
+  @media (max-width: 768px) {
     display: block;
   }
 }
@@ -238,7 +239,7 @@
 /* MOBILE NAVIGATION */
 /* ============= */
 
-@include media-breakpoint-down(md) {
+@media (max-width: 768px) {
   .header {
     position: relative;
     
