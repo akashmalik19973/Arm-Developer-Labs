@@ -15,6 +15,7 @@ projects:
     - ML
     - Migration to Arm
     - Performance and Architecture
+    - Cloud AI
     platform:
     - Servers and Cloud Computing
     - AI
@@ -52,6 +53,8 @@ projects:
     url: /2025/05/30/AI-Agents.html
     subjects:
     - ML
+    - Edge AI
+    - Cloud AI
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
@@ -109,6 +112,7 @@ projects:
     - ML
     - Gaming
     - Graphics
+    - Edge AI
     platform:
     - AI
     - Mobile, Graphics, and Gaming
@@ -130,6 +134,7 @@ projects:
     - CI-CD
     - ML
     - Migration to Arm
+    - Edge AI
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
@@ -170,6 +175,7 @@ projects:
     url: /2025/05/30/Responsible-AI-and-Yellow-Teaming.html
     subjects:
     - ML
+    - Cloud AI
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
@@ -290,6 +296,7 @@ projects:
     url: /2025/05/30/HPC-Algorithm.html
     subjects:
     - Performance and Architecture
+    - Cloud AI
     platform:
     - Servers and Cloud Computing
     - Laptops and Desktops
@@ -336,6 +343,7 @@ projects:
     - ML
     - Embedded Linux
     - RTOS Fundamentals
+    - Physical AI
     platform:
     - Automotive
     - IoT
