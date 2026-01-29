@@ -171,7 +171,7 @@ layout: base
             {%- if page.article_header.image.src -%}
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
               {%- assign _header_image_src = __return -%}
-              <img class="crop_image--cover" src="{{ _header_image_src }}" />
+              <img class="crop_image--cover" src="{{ _header_image_src }}" style="width: 100%; height: auto; max-width: 100%; display: block; object-fit: cover; object-position: center;" />
               <div class="scroll-container">
                 <div class="carousel">
                   <img src="partner_logos/R_logo.png" alt="R"/>
@@ -186,7 +186,7 @@ layout: base
             {%- if page.article_header.image.src -%}
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
               {%- assign _header_image_src = __return -%}
-              <img class="crop_image--cover" src="{{ _header_image_src }}" />
+              <img class="crop_image--cover" src="{{ _header_image_src }}" style="width: 100%; height: auto; max-width: 100%; display: block; object-fit: cover; object-position: center;" />
             {%- endif -%}
           {%- endif -%}
 
