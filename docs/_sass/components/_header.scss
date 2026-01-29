@@ -252,10 +252,16 @@
 @media (max-width: 768px) {
   .header {
     position: relative;
+    background: #ffffff !important;
     
     .main {
       padding: 0 map-get($spacers, 3);
     }
+  }
+  
+  .header--dark,
+  .header--light {
+    background: #ffffff !important;
   }
   
   .header__title {
@@ -266,7 +272,7 @@
   
   .header__brand {
     .brand_logo svg {
-      width: 120px;
+      width: 200px;
       height: auto;
     }
   }
@@ -276,28 +282,31 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: $header-background;
+    background: #ffffff !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease;
     
     &.navigation--open {
-      max-height: 500px;
+      max-height: none;
       overflow: visible;
     }
     
     & > ul {
       @include flex-direction(column);
       @include align-items(stretch);
-      padding: map-get($spacers, 3);
-      gap: map-get($spacers, 1);
+      padding: map-get($spacers, 2) map-get($spacers, 3);
+      gap: 0;
+      background: #ffffff !important;
     }
   }
   
   .navigation__item {
     margin: 0;
-    padding: map-get($spacers, 2) 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: map-get($spacers, 3) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     
     &::after {
       display: none;
@@ -322,8 +331,9 @@
   .blog {
     width: 100%;
     text-align: left;
-    padding: map-get($spacers, 2) 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: map-get($spacers, 3) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 0;
   }
   
   .navigation .search-button {
@@ -331,11 +341,20 @@
   }
 }
 
+/* iPad and tablet screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__brand {
+    .brand_logo svg {
+      width: 240px;
+    }
+  }
+}
+
 /* Extra small screens */
 @media (max-width: 480px) {
   .header__brand {
     .brand_logo svg {
-      width: 100px;
+      width: 140px;
     }
   }
   
