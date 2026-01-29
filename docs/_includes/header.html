@@ -67,7 +67,7 @@
     </div>
     
     <style>
-      @media (max-width: 768px) {
+      @media (max-width: 640px) {
         .header,
         .header--dark,
         .header--light {
@@ -85,13 +85,53 @@
         .navigation .search-button {
           display: flex !important;
         }
+        
+        /* Fix mission button highlighting */
+        .mission-button {
+          background-color: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          color: inherit !important;
+        }
+        
+        /* Ensure borders stay visible on all states */
+        .navigation__item,
+        .navigation__item:hover,
+        .navigation__item:active,
+        .navigation__item:focus {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        .blog,
+        .blog:hover,
+        .blog:active,
+        .blog:focus {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        .navigation__item a,
+        .navigation__item a:hover,
+        .navigation__item a:active,
+        .navigation__item a:focus {
+          border: none !important;
+        }
       }
       
       /* Add spacing for logo and navigation */
-      @media (min-width: 769px) {
+      @media (min-width: 641px) {
         .header .main {
           max-width: 95% !important;
           margin: 0 auto !important;
+        }
+        
+        /* Remove mission button highlighting on tablets/desktop */
+        .mission-button,
+        .mission-button:hover,
+        .mission-button:focus,
+        .mission-button:active {
+          background-color: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
         }
       }
     </style>
@@ -107,6 +147,16 @@
             navigation.classList.toggle('navigation--open');
             menuToggle.classList.toggle('is-active');
             header.classList.toggle('menu-open');
+            
+            // Force white background when menu opens
+            if (navigation.classList.contains('navigation--open')) {
+              header.style.backgroundColor = '#ffffff';
+              navigation.style.backgroundColor = '#ffffff';
+              var navUl = navigation.querySelector('ul');
+              if (navUl) {
+                navUl.style.backgroundColor = '#ffffff';
+              }
+            }
           });
           
           // Close menu when clicking on a nav link
