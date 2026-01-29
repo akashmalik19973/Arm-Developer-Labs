@@ -86,7 +86,7 @@
   @include overflow(auto, "x");
   
   /* Hide navigation on mobile by default */
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     display: none !important;
     
     &.navigation--open {
@@ -183,7 +183,7 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .mobile-menu-toggle {
     display: flex !important;
   }
@@ -232,7 +232,7 @@
 
 /* Hide mission button on mobile in header title, show in nav */
 .mission-button--desktop {
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     display: none !important;
   }
 }
@@ -240,7 +240,7 @@
 .navigation__item--mobile-only {
   display: none;
   
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     display: block;
   }
 }
@@ -249,7 +249,7 @@
 /* MOBILE NAVIGATION */
 /* ============= */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .header {
     position: relative;
     background: #ffffff !important;
